@@ -22,9 +22,8 @@ export default async (options: IOptions) => {
   let phrases: IPhrases[] = [];
 
   while (keepGoing) {
-    let contentPage: string | any = await fetchPage(searchTerm, current, BASE_URL);
-    console.log(contentPage);
-    let result: IResult | any = await extractHTML(contentPage);
+    const contentPage: string | any = await fetchPage(searchTerm, current, BASE_URL);
+    const result: IResult | any = await extractHTML(contentPage);
 
     phrases.push(...result.phrases);
 
