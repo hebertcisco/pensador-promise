@@ -29,6 +29,10 @@
 
 # Getting started
 
+## API
+
+[Repositório da API](https://github.com/hebertcisco/pensador-api)
+
 ## Usage
 
 ```js
