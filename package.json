@@ -1,7 +1,7 @@
 {
-  "name": "ts-npm-package-boilerplate",
+  "name": "pensador-promise",
   "version": "0.1.0",
-  "description": "TypeScript NPM Module Boilerplate",
+  "description": "Frases vindas do Pensador via WebScraping",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hebertcisco/ts-npm-package-boilerplate.git"
+    "url": "git+https://github.com/hebertcisco/pensador-promise.git"
   },
   "keywords": [
     "boilerplate",
@@ -27,11 +27,12 @@
   "author": "Hebert Cisco",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hebertcisco/ts-npm-package-boilerplate/issues"
+    "url": "https://github.com/hebertcisco/pensador-promise/issues"
   },
-  "homepage": "https://github.com/hebertcisco/ts-npm-package-boilerplate#readme",
+  "homepage": "https://github.com/hebertcisco/pensador-promise#readme",
   "devDependencies": {
     "@types/jest": "^26.0.15",
+    "@types/node-fetch": "^2.5.10",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "eslint": "^7.11.0",
@@ -42,5 +43,11 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.9",
+    "iconv-lite": "^0.6.3",
+    "node-fetch": "^2.6.1",
+    "slugify": "^1.5.3"
+  }
 }
