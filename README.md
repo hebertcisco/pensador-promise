@@ -27,24 +27,18 @@
 
 <p align="center"><strong>Frases vindas do Pensador via WebScraping</strong>✨</p>
 
-<p align="center">Connect your database easily using the pensador-promise package</p>
-
 # Getting started
 
-## Installation
+## Usage
 
-> Clone this repository: `git clone https://github.com/hebertcisco/pensador-promise`
+```js
+import pensador from 'pensador-promise';
 
-### Open the directory and run the script line:
-
-```bash
-cd pensador-promise && npm i && rm -rf .git && git init
+try{
+await pensador({ term: 'Jesus Cristo', max: 10 }).then((result) => {
+  console.log(result.phrases.map((term)=>term.text));
+});
+}cath(err){
+ console.log(err)
+}
 ```
-
-Or create use the button "Use this template"
-
-Edit the Icon on Figma:
-
-<a href="https://www.figma.com/file/vpevGX3j9tmtW8OyLQ9eUm/pensador-promise-icon?node-id=0%3A1">
-   <img alt="Figma Icon" src="https://raw.githubusercontent.com/hebertcisco/pensador-promise/main/.github/images/figma-badge.png"/>
-</a>
