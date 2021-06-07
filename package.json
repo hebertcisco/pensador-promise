@@ -31,7 +31,10 @@
   },
   "homepage": "https://github.com/hebertcisco/pensador-promise#readme",
   "devDependencies": {
+    "@types/cheerio": "^0.22.29",
+    "@types/iconv-lite": "^0.0.1",
     "@types/jest": "^26.0.15",
+    "@types/node": "7.0.7",
     "@types/node-fetch": "^2.5.10",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
@@ -39,13 +42,12 @@
     "eslint-plugin-jest": "^24.1.0",
     "jest": "^26.6.0",
     "ts-jest": "^26.4.1",
-    "typescript": "^4.0.3"
+    "typescript": "4.2.4"
   },
   "files": [
     "lib/**/*"
   ],
   "dependencies": {
-    "@types/cheerio": "^0.22.29",
     "cheerio": "^1.0.0-rc.9",
     "iconv-lite": "^0.6.3",
     "node-fetch": "^2.6.1",
