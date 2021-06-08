@@ -38,15 +38,34 @@
 ```js
 import pensador from 'pensador-promise';
 
-try{
-await pensador({ term: 'Jesus Cristo', max: 10 }).then((result) => {
-  console.log(result.phrases.map((term)=>term.text));
-});
-}cath(err){
- console.log(err)
+ async retornaFrase(termo) {
+    const phrase = await pensador(
+      {
+        term: termo,
+        max: 1
+      });
+    return(phrase);
+ }
+ try{
+  console.log(retornaFrase("Jesus Cristo"));
+ }catch(err){
+  console.error(err);
+ }
+```
+### Retorno:
+
+```json
+{
+  "termoDePesquisa": "frases_de_jesus_cristo",
+  "total": 1,
+  "frases": [
+    {
+      "autor": "Jesus Cristo",
+      "texto": "E conhecereis a verdade e a verdade vos libertará."
+    }
+  ]
 }
 ```
-
 ## HTTP API
 
 > Curl
@@ -68,6 +87,7 @@ Host: pensador-api.vercel.app
 
 `?term=[termo_de_pesquisa]&max=[maximo_de_resultados]`
 
+### Retorno
 ```json
 {
   "termoDePesquisa": "frases_de_jesus_cristo",
