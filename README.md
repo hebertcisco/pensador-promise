@@ -29,6 +29,17 @@
 
 # Getting started
 
+## Install
+
+```sh
+npm i pensador-promise
+```
+Or
+
+```sh
+yarn add pensador-promise
+```
+
 ## API
 
 [Repositório da API](https://github.com/hebertcisco/pensador-api)
