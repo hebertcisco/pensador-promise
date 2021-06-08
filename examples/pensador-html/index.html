@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensador API</title>
+    <meta name="description" content="Frases vindas do Pensador" />
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+                Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        .main {
+            padding: 5rem 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            width: 100%;
+            height: 100px;
+            border-top: 1px solid #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .title a {
+            color: #0070f3;
+            text-decoration: none;
+        }
+
+        .title a:hover,
+        .title a:focus,
+        .title a:active {
+            text-decoration: underline;
+        }
+
+        .title {
+            margin: 0;
+            line-height: 1.15;
+            font-size: 4rem;
+        }
+
+        .title,
+        .description {
+            text-align: center;
+        }
+
+        .description {
+            line-height: 1.5;
+            font-size: 1.5rem;
+        }
+
+        .code {
+            background: #fafafa;
+            border-radius: 5px;
+            padding: 0.75rem;
+            font-size: 1.1rem;
+            font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+                Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin-top: 3rem;
+        }
+
+        .card {
+            margin: 1rem;
+            padding: 1.5rem;
+            text-align: left;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            transition: color 0.15s ease, border-color 0.15s ease;
+            width: 45%;
+        }
+
+        .card:hover,
+        .card:focus,
+        .card:active {
+            color: #0070f3;
+            border-color: #0070f3;
+        }
+
+        .card h2 {
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .logo {
+            height: 1em;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <main class='main'>
+            <h1 class='title'></h1>
+            Pensador API
+            </h1>
+            <p class='description'>
+                Como disse <span id="autor"></span>
+                <code class='code' id='frase'></code>
+            </p>
+
+            <div class='grid'>
+                <a href="https://github.com/hebertcisco/pensador-api#readme" class='card'>
+                    <h2>Documentação &rarr;</h2>
+                    <p>Aprenda como integrar a API em seu projeto</p>
+                </a>
+
+                <a href="https://www.npmjs.com/package/pensador-promise" class='card'>
+                    <h2>Pacote NPM &rarr;</h2>
+                    <p>Instale o Pacote NPM em seu projeto</p>
+                </a>
+
+                <a href="https://github.com/hebertcisco/pensador-promise" class='card'>
+                    <h2>Código Fonte &rarr;</h2>
+                    <p>Veja como funciona e contribuia com o projeto</p>
+                </a>
+
+                <a href="https://pensador-api.vercel.app/?term=Jesus+Cristo&max=7" class='card'>
+                    <h2>Endpoint &rarr;</h2>
+                    <p>
+                        Teste o Endpoint da API que retorna um JSON de frases
+                    </p>
+                </a>
+            </div>
+        </main>
+
+        <footer class='footer'>
+            <a href="https://hebertbarros.me?utm_source=pensador-promise&utm_campaign=pensador-api" target="_blank"
+                rel="noopener noreferrer">
+                Powered by
+                <span class='logo'>
+                    HB.me
+                </span>
+            </a>
+        </footer>
+    </div>
+    <script>
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        const randonPhrase = randomInt(0, 10);
+        const autor = document.getElementById('autor');
+        const frase = document.getElementById('frase');
+        fetch("https://pensador-api.vercel.app")
+            .then(response => response.json())
+            .then(result => {
+                autor.innerText = result.frases[randonPhrase].autor
+                frase.innerText = result.frases[randonPhrase].texto
+            })
+            .catch(error => console.log('error', error));
+    </script>
+
+</body>
+
+</html>
