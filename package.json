@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/hebertcisco/pensador-promise/issues"
   },
-  "homepage": "https://github.com/hebertcisco/pensador-promise#readme",
+  "homepage": "https://pensador-promise.vercel.app/",
   "devDependencies": {
     "@types/cheerio": "^0.22.29",
     "@types/iconv-lite": "^0.0.1",
