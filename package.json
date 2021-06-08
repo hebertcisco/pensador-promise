@@ -20,9 +20,13 @@
     "type": "git",
     "url": "git+https://github.com/hebertcisco/pensador-promise.git"
   },
-  "keywords": [
-    "boilerplate",
-    "typescript"
+ "keywords": [
+    "pensador-api",
+    "node",
+    "mongo",
+    "express",
+    "javascript",
+    "server"
   ],
   "author": "Hebert Cisco",
   "license": "MIT",
