@@ -27,3 +27,12 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
+      - name: npm-audit
+        uses: luisfontes19/npm-audit-action@v0.1.0
+      - name: Npm package update
+        uses: sotszk/npm-package-update-action@v1.0.1
+      - name: Tag on NPM Package Version Change
+        uses: neverendingqs/gh-action-tag-on-npm-version@v1.0.1
+
+
+
