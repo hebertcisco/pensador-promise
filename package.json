@@ -54,7 +54,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.9",
     "iconv-lite": "^0.6.3",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "slugify": "^1.5.3"
   }
 }
