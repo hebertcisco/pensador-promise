@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import axios from "axios";
 
@@ -52,7 +51,7 @@ export default function Home({ phrases }) {
                         <h2>Endpoint &rarr;</h2>
                         <p>
                             Teste o Endpoint da API que retorna um JSON de frases
-            </p>
+                        </p>
                     </a>
                 </div>
             </main>
