@@ -21,7 +21,7 @@ export default function Home({ phrases }) {
                 </h1>
                 {phrases?.length !== 0 && (<p className={styles.description}>
                     Como disse {phrases.frases[randonPhrase]?.autor}{' '}
-                    <code className={styles.code}>{JSON.stringify(phrases.frases[randonPhrase].texto)}</code>
+                    <code className={styles.code}>{JSON.stringify(phrases?.frases[randonPhrase]?.texto)}</code>
                 </p>)}
 
                 <div className={styles.grid}>
