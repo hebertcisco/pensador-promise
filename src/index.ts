@@ -10,7 +10,7 @@ export default async (options: IOptions) => {
     _throw('A search term must be defined');
   }
 
-  const searchTerm = slugify(`frases de ${options.term}`, {
+  const searchTerm = slugify(`${options.term}`, {
     replacement: '_',
     remove: /[*+~.()'"!:@]/g,
     lower: true,
