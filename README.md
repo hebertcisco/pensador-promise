@@ -29,6 +29,12 @@
 
 # Getting started
 
+[![codecov](https://codecov.io/gh/hebertcisco/pensador-promise/branch/main/graph/badge.svg?token=ETOV4Z3YZQ)](https://codecov.io/gh/hebertcisco/pensador-promise)
+
+[![Running Code Coverage](https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml/badge.svg)](https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml)
+
+[![Node.js build and publish package](https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml)
+
 ## Install
 
 ```sh
