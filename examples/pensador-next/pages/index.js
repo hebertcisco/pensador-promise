@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import axios from "axios";
+import styles from '../styles/Home.module.css'
 
 export default function Home({ phrases }) {
     function randomInt(min, max) {
@@ -19,11 +19,10 @@ export default function Home({ phrases }) {
                 <h1 className={styles.title}>
                     Pensador API
                 </h1>
-
-                <p className={styles.description}>
-                    Como disse {phrases.frases[randonPhrase].autor}{' '}
+                {phrases?.length !== 0 && (<p className={styles.description}>
+                    Como disse {phrases.frases[randonPhrase]?.autor}{' '}
                     <code className={styles.code}>{JSON.stringify(phrases.frases[randonPhrase].texto)}</code>
-                </p>
+                </p>)}
 
                 <div className={styles.grid}>
                     <a href="https://github.com/hebertcisco/pensador-api#readme" className={styles.card}>
@@ -73,6 +72,8 @@ export default function Home({ phrases }) {
 }
 
 export const getStaticProps = async ({ params }) => {
+    void params;
+    const revalidate = 60 * 60 * 24 * 7;
     try {
         const result = await axios({
             method: "get",
@@ -82,12 +83,12 @@ export const getStaticProps = async ({ params }) => {
 
         return {
             props: { phrases: data },
-            revalidate: 160
+            revalidate: revalidate
         };
     } catch (err) {
         return {
             props: { phrases: { error: err?.message } },
-            revalidate: 160
+            revalidate: revalidate
         };
     }
 };
