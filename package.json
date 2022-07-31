@@ -1,6 +1,6 @@
 {
   "name": "pensador-promise",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Frases vindas do Pensador via WebScraping",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
