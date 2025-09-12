@@ -3,6 +3,13 @@ import { request } from 'undici';
 import qs from 'qs';
 import { isSuccessfulRequest } from '../utils/isSuccessfulRequest';
 
+/**
+ * Fetches a page with the given search term and current page number from the specified base URL.
+ * @param searchTerm
+ * @param current
+ * @param baseUrl
+ * @returns
+ */
 export async function fetchPage(searchTerm: string, current = 1, baseUrl: string) {
   const params = qs.stringify({
     q: searchTerm,
