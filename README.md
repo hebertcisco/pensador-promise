@@ -6,6 +6,9 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/pensador-promise"><img alt="npm" src="https://img.shields.io/npm/v/pensador-promise.svg?color=336791"></a>
+  <a href="https://www.npmjs.com/package/pensador-promise"><img alt="downloads/week" src="https://img.shields.io/npm/dw/pensador-promise?color=336791"></a>
+  <a href="https://www.npmjs.com/package/pensador-promise"><img alt="downloads/month" src="https://img.shields.io/npm/dm/pensador-promise?color=336791"></a>
+  <a href="https://www.npmjs.com/package/pensador-promise"><img alt="downloads/total" src="https://img.shields.io/npm/dt/pensador-promise?color=336791"></a>
   <a href="https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml"><img alt="Coverage" src="https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml/badge.svg"></a>
   <a href="https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml"><img alt="Publish" src="https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml/badge.svg"></a>
   <a href="https://codecov.io/gh/hebertcisco/pensador-promise"><img alt="codecov" src="https://codecov.io/gh/hebertcisco/pensador-promise/branch/main/graph/badge.svg?token=ETOV4Z3YZQ"></a>
@@ -143,4 +146,3 @@ MIT. Veja `LICENSE.md`.
 ## Aviso legal
 
 Este projeto faz web scraping do site Pensador apenas para fins educacionais e de uso pessoal. Respeite os termos de uso do serviço e evite sobrecarga com muitas requisições.
-

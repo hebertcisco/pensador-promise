@@ -60,11 +60,32 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-tecnobertinfo@gmail.com.
+<opensource@hotbrains.com.br>.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
 reporter of any incident.
+
+### Reporting Guidelines (Como reportar)
+
+* Prefer email to <opensource@hotbrains.com.br> with: links/evidences, context, date/time, and any prior attempts to resolve.
+* Reports can be submitted in Portuguese or English. Anonymous reports are accepted; we will do our best within the limits of available information.
+* We aim to acknowledge receipt within 72 hours and provide a timeline for next steps.
+
+### Confidentiality and Non-Retaliation
+
+We treat reports as confidential and share details only with individuals who need them to investigate and resolve the issue. Retaliation against reporters or witnesses is strictly prohibited and itself a violation of this Code.
+
+### Enforcement Process Overview
+
+1) Receive report and acknowledge.
+2) Assess scope, gather information, and interview involved parties when appropriate.
+3) Decide on consequences guided by the Enforcement Guidelines below.
+4) Communicate the outcome to the reporter (to the extent possible) and the respondent.
+
+### Appeals
+
+If you feel an action taken was made in error or is disproportionate, you may appeal by replying to the decision notice or emailing <opensource@hotbrains.com.br> with additional context.
 
 ## Enforcement Guidelines
 
@@ -115,8 +136,8 @@ the community.
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
-https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+version 2.1, available at
+<https://www.contributor-covenant.org/version/2/1/code_of_conduct.html>.
 
 Community Impact Guidelines were inspired by [Mozilla's code of conduct
 enforcement ladder](https://github.com/mozilla/diversity).
@@ -124,5 +145,5 @@ enforcement ladder](https://github.com/mozilla/diversity).
 [homepage]: https://www.contributor-covenant.org
 
 For answers to common questions about this code of conduct, see the FAQ at
-https://www.contributor-covenant.org/faq. Translations are available at
-https://www.contributor-covenant.org/translations.
+<https://www.contributor-covenant.org/faq>. Translations are available at
+<https://www.contributor-covenant.org/translations>.
