@@ -8,7 +8,7 @@ export default function _throw(message: string | string[] | Error) {
     throw new Error(message.join('\n'));
   }
   if (message instanceof Error) {
-    throw message.message;
+    throw message;
   }
-  throw message;
+  throw new Error(String(message));
 }
