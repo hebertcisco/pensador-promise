@@ -13,7 +13,7 @@ describe('fetchUrl', () => {
     jest.clearAllMocks();
   });
 
-  it('deve retornar o corpo decodificado quando status for 200', async () => {
+  it('should return decoded body when status is 200', async () => {
     const bodyText = 'Olá mundo';
     const arrayBuffer = new TextEncoder().encode(bodyText).buffer;
     getRequestMock().mockResolvedValue({
@@ -28,7 +28,7 @@ describe('fetchUrl', () => {
     expect(getRequestMock()).toHaveBeenCalledWith(url);
   });
 
-  it('deve retornar o corpo decodificado quando status for 302 (3xx)', async () => {
+  it('should return decoded body when status is 302 (3xx)', async () => {
     const bodyText = 'Redirecionado';
     const arrayBuffer = new TextEncoder().encode(bodyText).buffer;
     getRequestMock().mockResolvedValue({
@@ -42,7 +42,7 @@ describe('fetchUrl', () => {
     expect(result).toBe(bodyText);
   });
 
-  it('deve lançar um erro com status quando status não for bem-sucedido', async () => {
+  it('should throw an error with status when status is not successful', async () => {
     getRequestMock().mockResolvedValue({
       statusCode: 404,
       body: {
@@ -53,7 +53,7 @@ describe('fetchUrl', () => {
     await expect(fetchUrl(url)).rejects.toThrow(`Error fetching ${url}, status code: 404`);
   });
 
-  it('deve relançar o mesmo Error quando a requisição falha com Error', async () => {
+  it('should rethrow the same Error when the request fails with Error', async () => {
     const boom = new Error('boom');
     getRequestMock().mockImplementation(() => {
       throw boom;
@@ -62,7 +62,7 @@ describe('fetchUrl', () => {
     await expect(fetchUrl(url)).rejects.toBe(boom);
   });
 
-  it('deve lançar um novo Error quando a requisição falha com valor não-Error', async () => {
+  it('should throw a new Error when the request fails with a non-Error value', async () => {
     getRequestMock().mockImplementation(() => {
       // Simula lançar um valor primitivo
       // eslint-disable-next-line no-throw-literal
