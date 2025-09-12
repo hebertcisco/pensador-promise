@@ -1,6 +1,11 @@
 import cheerio from 'cheerio';
 import { IPhrases } from '../typescript';
 
+/**
+ * Extract phrases and pagination info from the HTML content of a phrases page
+ * @param htmlContent - HTML content of the phrases page
+ * @returns - Promise resolving to an object containing phrases and a next page indicator
+ */
 async function extractHTML(htmlContent: string) {
   try {
     const phrases: IPhrases[] = [];

@@ -53,7 +53,7 @@ yarn add pensador-promise
 ## Usage
 
 ```js
-import pensador from 'pensador-promise';
+import pensador, { randomPhrase } from 'pensador-promise';
 
  async retornaFrase(termo) {
     const phrase = await pensador(
@@ -67,6 +67,14 @@ import pensador from 'pensador-promise';
   console.log(retornaFrase("Jesus Cristo"));
  }catch(err){
   console.error(err);
+ }
+
+ // Random phrase from a random author
+ try {
+   const phrase = await randomPhrase();
+   console.log(`${phrase.author}: ${phrase.text}`);
+ } catch (err) {
+   console.error(err);
  }
 ```
 ### Retorno:
