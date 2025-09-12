@@ -1,38 +1,54 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
+about: Report a problem in pensador-promise
+title: 'bug: '
+labels: 'bug'
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Summary
+Descreva claramente o problema observado (PT-BR ou EN).
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Environment
+- Biblioteca (versão): `pensador-promise@x.y.z`
+- Node.js: `node -v`
+- Gerenciador de pacotes: npm/yarn/pnpm e versão
+- SO: macOS/Linux/Windows (versão)
+- Execução: local/CI (qual?)
+- Região/rede (se relevante para scraping)
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Steps to Reproduce
+Passos para reproduzir o comportamento:
+1. ...
+2. ...
+3. ...
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## Expected behavior
+O que você esperava que acontecesse.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Actual behavior
+O que aconteceu de fato.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## Logs / stack trace
+Cole aqui logs ou erros relevantes (remova dados sensíveis):
 
-**Additional context**
-Add any other context about the problem here.
+```
+<logs>
+```
+
+## Minimal reproduction
+Link para repositório/Gist ou trecho mínimo que reproduz o bug (idealmente com teste Jest).
+
+## Screenshots (opcional)
+Se aplicável, adicione imagens.
+
+## Additional context
+- Frequência (sempre/às vezes/raro)
+- Impacto (bloqueia release? produção?)
+- Workaround temporário (se houver)
+
+## Checklist
+- [ ] Verifiquei issues/PRs existentes para evitar duplicidade
+- [ ] Reproduz com a versão mais recente
+- [ ] Incluí um caso mínimo reproduzível
