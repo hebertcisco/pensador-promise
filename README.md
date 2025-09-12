@@ -1,151 +1,146 @@
 <p align="center">
- <img width="100px" src="https://raw.githubusercontent.com/hebertcisco/pensador-promise/main/.github/images/favicon512x512-pensador.png" align="center" alt=":package: pensador-promise" />
- <h2 align="center">:package: pensador-promise</h2>
- <p align="center">Frases vindas do Pensador via WebScraping</p>
+  <img width="100px" src="https://raw.githubusercontent.com/hebertcisco/pensador-promise/main/.github/images/favicon512x512-pensador.png" align="center" alt=":package: pensador-promise" />
+</p>
+<h2 align="center">pensador-promise</h2>
+<p align="center">Frases do Pensador via Web Scraping – simples e tipado</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/pensador-promise"><img alt="npm" src="https://img.shields.io/npm/v/pensador-promise.svg?color=336791"></a>
+  <a href="https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml"><img alt="Coverage" src="https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml/badge.svg"></a>
+  <a href="https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml"><img alt="Publish" src="https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml/badge.svg"></a>
+  <a href="https://codecov.io/gh/hebertcisco/pensador-promise"><img alt="codecov" src="https://codecov.io/gh/hebertcisco/pensador-promise/branch/main/graph/badge.svg?token=ETOV4Z3YZQ"></a>
+  <a href="LICENSE.md"><img alt="License" src="https://img.shields.io/badge/license-MIT-336791.svg"></a>
 </p>
 
-  <p align="center">
-    <a href="https://github.com/hebertcisco/pensador-promise/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/hebertcisco/pensador-promise?style=flat&color=336791" />
-    </a>
-    <a href="https://github.com/hebertcisco/pensador-promise/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/hebertcisco/pensador-promise?style=flat&color=336791" />
-    </a>
-     <a href="https://github.com/hebertcisco/pensador-promise">
-      <img alt="GitHub Downloads" src="https://img.shields.io/npm/dw/pensador-promise?style=flat&color=336791" />
-    </a>
-    <a href="https://github.com/hebertcisco/pensador-promise">
-      <img alt="GitHub Total Downloads" src="https://img.shields.io/npm/dt/pensador-promise?color=336791&label=Total%20downloads" />
-    </a>
-    <br />
-    <br />
-  <a href="https://github.com/hebertcisco/pensador-promise/issues/new/choose">Report Bug</a>
-  <a href="https://github.com/hebertcisco/pensador-promise/issues/new/choose">Request Feature</a>
-  </p>
+<p align="center">
+  <a href="https://github.com/hebertcisco/pensador-promise/issues/new/choose">Reportar bug</a>
+  ·
+  <a href="https://github.com/hebertcisco/pensador-promise/issues/new/choose">Sugerir feature</a>
+  ·
+  <a href="https://www.buymeacoffee.com/hebertcisco">Apoiar o projeto</a>
+</p>
 
-<p align="center">Did you like the project? Please, considerate <a href="https://www.buymeacoffee.com/hebertcisco">a donation</a> to help improve!</p>
+## Requisitos
 
-<p align="center"><strong>Frases vindas do Pensador via WebScraping</strong>✨</p>
+- Node.js 18, 19, 20, 21 ou 22
 
-# Getting started
-
-[![codecov](https://codecov.io/gh/hebertcisco/pensador-promise/branch/main/graph/badge.svg?token=ETOV4Z3YZQ)](https://codecov.io/gh/hebertcisco/pensador-promise)
-
-[![Running Code Coverage](https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml/badge.svg)](https://github.com/hebertcisco/pensador-promise/actions/workflows/coverage.yml)
-
-[![Node.js build and publish package](https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/hebertcisco/pensador-promise/actions/workflows/npm-publish.yml)
-
-## Install
+## Instalação
 
 ```sh
 npm i pensador-promise
 ```
-Or
+
+ou
 
 ```sh
 yarn add pensador-promise
 ```
 
-## API
+## Uso rápido
 
-[Repositório da API](https://github.com/hebertcisco/pensador-api)
+ESM/TypeScript
 
-## Usage
-
-```js
+```ts
 import pensador, { randomPhrase } from 'pensador-promise';
 
- async retornaFrase(termo) {
-    const phrase = await pensador(
-      {
-        term: termo,
-        max: 1
-      });
-    return(phrase);
- }
- try{
-  console.log(retornaFrase("Jesus Cristo"));
- }catch(err){
-  console.error(err);
- }
+// Buscar frases por termo
+const result = await pensador({ term: 'Jesus Cristo', max: 1 });
+console.log(result);
 
- // Random phrase from a random author
- try {
-   const phrase = await randomPhrase();
-   console.log(`${phrase.author}: ${phrase.text}`);
- } catch (err) {
-   console.error(err);
- }
+// Uma frase aleatória de um autor aleatório
+const phrase = await randomPhrase();
+console.log(`${phrase.author}: ${phrase.text}`);
 ```
-### Retorno:
+
+CommonJS
+
+```js
+const pensador = require('pensador-promise').default;
+const { randomPhrase } = require('pensador-promise');
+
+(async () => {
+  const result = await pensador({ term: 'Jesus Cristo', max: 1 });
+  console.log(result);
+
+  const phrase = await randomPhrase();
+  console.log(`${phrase.author}: ${phrase.text}`);
+})();
+```
+
+Exemplo de retorno da busca
 
 ```json
 {
-  "termoDePesquisa": "frases_de_jesus_cristo",
   "total": 1,
-  "frases": [
-    {
-      "autor": "Jesus Cristo",
-      "texto": "E conhecereis a verdade e a verdade vos libertará."
-    }
+  "searchTerm": "jesus_cristo",
+  "phrases": [
+    { "author": "Jesus Cristo", "text": "E conhecereis a verdade e a verdade vos libertará." }
   ]
 }
 ```
-## HTTP API
 
-> Curl
+## API (biblioteca)
+
+Assinaturas principais:
+
+```ts
+type IPhrases = { author: string; text: string };
+type IResult = { phrases: IPhrases[]; next: boolean };
+type IOptions = { term: string; max: number };
+
+declare function pensador(options: IOptions): Promise<{
+  total: number;
+  searchTerm: string;
+  phrases: IPhrases[];
+}>;
+
+declare function randomPhrase(): Promise<IPhrases>;
+```
+
+Observações
+
+- O campo `searchTerm` é o termo normalizado (slug) usado na busca.
+- `max` limita o número de frases retornadas.
+- Em caso de erro de rede ou estrutura inesperada no site, uma exceção é lançada.
+
+## HTTP API (alternativa)
+
+Para usar via HTTP, consulte também o projeto complementar:
+
+- Repositório: https://github.com/hebertcisco/pensador-api
+
+Exemplos
 
 ```sh
 curl --location --request GET 'https://pensador-api.vercel.app/?term=Jesus+Cristo&max=7'
 ```
-
-> HTTP
 
 ```http
 GET ?term=Jesus+Cristo&max=7 HTTP/1.1
 Host: pensador-api.vercel.app
 ```
 
-> URL: [https://pensador-api.vercel.app/?term=Jesus+Cristo&max=7](https://pensador-api.vercel.app/?term=Jesus+Cristo&max=7)
+## Desenvolvimento
 
-### Endpoint:
+Scripts úteis
 
-`?term=[termo_de_pesquisa]&max=[maximo_de_resultados]`
+- `npm test`: roda os testes (Jest)
+- `npm run test:coverage`: cobertura de testes
+- `npm run build`: compila para `lib/`
+- `npm run lint` / `npm run lint:fix`: lint do código
 
-### Retorno
-```json
-{
-  "termoDePesquisa": "frases_de_jesus_cristo",
-  "total": 7,
-  "frases": [
-    {
-      "autor": "Jesus Cristo",
-      "texto": "E conhecereis a verdade e a verdade vos libertará."
-    },
-    {
-      "autor": "Jesus Cristo",
-      "texto": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que n'Ele crê não pereça, mas tenha a vida eterna."
-    },
-    {
-      "autor": "Jesus Cristo",
-      "texto": "Pai, perdoa-lhes, porque não sabem o que fazem."
-    },
-    {
-      "autor": "Jesus Cristo",
-      "texto": "Eu sou a ressurreição e a vida. Quem crê em mim, ainda que morra, viverá; e quem vive e crê em mim nunca morrerá."
-    },
-    {
-      "autor": "Jesus Cristo",
-      "texto": "De que serve ao homem conquistar o mundo inteiro se perder a alma?"
-    },
-    {
-      "autor": "Jesus Cristo",
-      "texto": "Ame seus inimigos, faça o bem para aqueles que te odeiam, abençoe aqueles que te amaldiçoam, reze por aqueles que te maltratam. Se alguém te bater no rosto, ofereça a outra face."
-    },
-    {
-      "autor": "Jesus Cristo",
-      "texto": "Conselhos ruins podem acabar com um dia, um ano ou uma vida inteira."
-    }
-  ]
-}
-```
+## Contribuindo
+
+Contribuições são bem-vindas!
+
+- Leia `CONTRIBUTING.md` e `CODE_OF_CONDUCT.md`.
+- Abra um issue para discutir melhorias e bugs.
+
+## Licença
+
+MIT. Veja `LICENSE.md`.
+
+## Aviso legal
+
+Este projeto faz web scraping do site Pensador apenas para fins educacionais e de uso pessoal. Respeite os termos de uso do serviço e evite sobrecarga com muitas requisições.
+
